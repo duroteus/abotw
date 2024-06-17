@@ -1,2 +1,2 @@
-# [A]rcane [B]allad [o]f [t]he [W]ild
+# Arcane Ballad of the Wild
 Projeto pessoal para features de Dungeons &amp; Dragons.
