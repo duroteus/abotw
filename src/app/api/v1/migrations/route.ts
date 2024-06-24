@@ -9,7 +9,7 @@ const getDefaultMigrationOptions = async (dryRun: boolean) => {
   return {
     dbClient: dbClient,
     dryRun: dryRun,
-    dir: join("src", "infra", "migrations"),
+    dir: join(process.cwd(), "src", "infra", "migrations"),
     direction: "up" as MigrationDirection,
     verbose: true,
     migrationsTable: "pgmigrations",
