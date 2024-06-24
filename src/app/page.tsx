@@ -5,7 +5,7 @@ export default function Home() {
         Arcane Ballad of the Wild
       </h1>
       <p className="font-shoju">Em construção...</p>
-      <img src="./icon.svg" alt="" />
+      <img src="./icon.svg" alt="icone" />
     </div>
   );
 }
