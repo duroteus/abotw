@@ -1,11 +1,14 @@
 import database from "@/infra/database";
+import orchestrator from "@/tests/orchestrator";
 import fs from "fs";
 import path from "path";
 
-beforeAll(cleanDatabase);
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+  await database.query("drop schema public cascade; create schema public");
+});
 
 async function cleanDatabase() {
-  console.log("Database clean");
   await database.query("drop schema public cascade; create schema public");
 }
 
