@@ -1,5 +1,5 @@
-import database from "@/infra/database";
-import orchestrator from "@/tests/orchestrator";
+import { database } from "@/infra/database";
+import { orchestrator } from "@/tests/orchestrator";
 import fs from "fs";
 import path from "path";
 
@@ -7,10 +7,6 @@ beforeAll(async () => {
   await orchestrator.waitForAllServices();
   await database.query("drop schema public cascade; create schema public");
 });
-
-async function cleanDatabase() {
-  await database.query("drop schema public cascade; create schema public");
-}
 
 describe("POST to /api/v1/migrations", () => {
   test("should return status code 201", async () => {

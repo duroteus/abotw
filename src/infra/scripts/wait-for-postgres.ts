@@ -12,11 +12,7 @@ const interval = setInterval(() => {
 function checkPostgres(): void {
   exec("docker exec postgres-dev pg_isready --host localhost", handleReturn);
 
-  function handleReturn(
-    error: Error | null,
-    stdout: string,
-    stderr: string,
-  ): void {
+  function handleReturn(error: Error | null, stdout: string): void {
     if (stdout.search("accepting connections") === -1) {
       setTimeout(checkPostgres, 1000);
       return;
