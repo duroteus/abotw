@@ -1,5 +1,4 @@
-import database from "@/infra/database";
-import { NextRequest } from "next/server";
+import { database } from "@/infra/database";
 import migrationRunner from "node-pg-migrate";
 import { MigrationDirection } from "node-pg-migrate/dist/types";
 import { join } from "node:path";
@@ -16,7 +15,7 @@ const getDefaultMigrationOptions = async (dryRun: boolean) => {
   };
 };
 
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
   const defaultMigrationOptions = await getDefaultMigrationOptions(true);
   const pendingMigrations = await migrationRunner(defaultMigrationOptions);
   await defaultMigrationOptions.dbClient.end();

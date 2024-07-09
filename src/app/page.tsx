@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Home() {
   return (
     <div className="w-full h-screen m-auto flex gap-2 flex-col justify-center items-center">
@@ -5,6 +6,7 @@ export default function Home() {
         Arcane Ballad of the Wild
       </h1>
       <p className="font-shoju">Em construção...</p>
+
       <img src="./icon.svg" alt="icone" />
     </div>
   );

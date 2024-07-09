@@ -1,7 +1,6 @@
-import database from "@/infra/database";
-import { NextRequest } from "next/server";
+import { database } from "@/infra/database";
 
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
   const updatedAt = new Date().toISOString();
   const databaseVersionResult = await database.query("SHOW server_version;");
   const databaseVersionValue = databaseVersionResult?.rows[0].server_version;
