@@ -7,7 +7,7 @@ async function waitForAllServices() {
     return retry(fetchStatusPage, {
       retries: 100,
       maxTimeout: 1000,
-      onRetry: (error, attempt) => {
+      onRetry: (error: Error, attempt) => {
         console.log(
           `Attempt ${attempt} - Failed to fetch status page: ${error.message}`,
         );
