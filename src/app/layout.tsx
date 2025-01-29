@@ -6,7 +6,7 @@ import "./styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arcane Ballad of the Wild",
+  title: "ABOTW",
   description: "Projeto criado para fins de estudo.",
 };
 

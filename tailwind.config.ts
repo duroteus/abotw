@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "pulse-red": "pulseRed 1.5s ease-in-out infinite",
+      },
       colors: {
         gray: {
           100: "#f7fafc",
