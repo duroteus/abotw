@@ -1,2 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Shojumaru&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: bold;
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+}
