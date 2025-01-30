@@ -10,14 +10,16 @@
   }
 }
 
-@keyframes pulseRed {
-  0% {
-    background-color: rgba(255, 0, 0, 0.1); /* Vermelho claro */
+@keyframes color-pulse {
+  0%,
+  100% {
+    fill: #b91f31;
   }
   50% {
-    background-color: rgba(255, 0, 0, 0.5); /* Vermelho médio */
+    fill: #db1111;
   }
-  100% {
-    background-color: rgba(255, 0, 0, 0.1); /* Vermelho claro */
-  }
+}
+
+.animate-color-pulse {
+  animation: color-pulse 3s ease-in-out infinite;
 }
