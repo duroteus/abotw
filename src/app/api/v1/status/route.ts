@@ -1,8 +1,7 @@
 import { database } from "@/infra/database";
 import { InternalServerError } from "@/infra/errors";
-import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (req: NextRequest, res: NextResponse) => {
+export const GET = async () => {
   try {
     const updatedAt = new Date().toISOString();
     const databaseVersionResult = await database.query("SHOW server_version;");
